@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	font-size: calc(16px + 1vw);
+}
+
+body {
+	font-family:
+		'DM Sans',
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		Arial,
+		sans-serif;
+}
+
+/* Top nav styling */
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 12px 10vw;
+	gap: 10vw;
+	height: 75px;
+
+	border-bottom: 3px solid #e1e0e0;
+	background-color: #f4f4f4;
+}
+
+/* Nav links */
+header a {
+	text-decoration: none;
+	color: rgb(84, 84, 84);
+	font-weight: 400;
+	font-size: 0.9rem;
+}
+
+#logo {
+	font-weight: 900;
+	font-size: 1.3rem;
+}
+
+.topnav {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.3rem;
+
+	max-width: 500px;
+	flex: 2;
+}
+
+/* Fixed navbar */
+header {
+	position: sticky;
+	top: 0;
+	overflow: hidden;
+}
+
+/* Hero styling */
+.hero-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: calc(100vh - 75px);
+	background-color: rgb(145, 145, 167);
+
+	padding: 5vh 5vw;
+}
+
+/*  Box medie */
+.medie {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: 1.5rem;
+}
+
+.container {
+	background-color: seagreen;
+}
+
+.container > h1 {
+	font-size: 2.5rem;
+}
+
+.voto {
+	font-size: 0;
+}
+
+.blackbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100px;
+	font-weight: 900;
+
+	background-color: black;
+	color: white;
+}
+
+.intero {
+	font-size: 3rem;
+}
+
+.decimale {
+	font-size: 1.3rem;
+}
+
+/* Second section styling */
+#second {
+	height: 100vh;
+}
