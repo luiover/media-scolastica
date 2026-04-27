@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-	font-size: calc(16px + 1vw);
+	font-size: calc(1rem + 0.25vw);
+	line-height: calc(1.1em + 0.5vw);
 }
 
 body {
@@ -23,25 +24,16 @@ header {
 	align-items: center;
 	justify-content: space-between;
 
-	padding: 12px 10vw;
-	gap: 10vw;
-	height: 75px;
+	padding: 0 5%;
+	gap: max(6px, 12vw);
+	height: 60px;
 
 	border-bottom: 3px solid #e1e0e0;
 	background-color: #f4f4f4;
-}
 
-/* Nav links */
-header a {
-	text-decoration: none;
-	color: rgb(84, 84, 84);
-	font-weight: 400;
-	font-size: 0.9rem;
-}
+	font-size: 1rem;
 
-#logo {
-	font-weight: 900;
-	font-size: 1.3rem;
+	overflow-wrap: anywhere;
 }
 
 .topnav {
@@ -51,6 +43,19 @@ header a {
 
 	max-width: 500px;
 	flex: 2;
+}
+
+/* Nav links */
+header a {
+	text-decoration: none;
+	color: rgb(84, 84, 84);
+	font-weight: 400;
+}
+
+/* Text settings */
+#logo {
+	font-weight: 900;
+	font-size: 1.6em;
 }
 
 /* Fixed navbar */
@@ -67,7 +72,6 @@ header {
 	justify-content: center;
 
 	height: calc(100vh - 75px);
-	background-color: rgb(145, 145, 167);
 
 	padding: 5vh 5vw;
 }
