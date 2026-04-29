@@ -11,7 +11,11 @@ const mediaTot = document.querySelector('.mediaTot .voto');
 const mediaIntero = mediaTot.querySelector('.intero');
 const mediaDecimale = mediaTot.querySelector('.decimale');
 
-const scores = [];
+// This button clears both DOM state and persisted storage
+const removeScores = document.getElementById('rimuovi-voti');
+
+const scores = JSON.parse(localStorage.getItem('scores')) || [];
+renderScores();
 
 // Handle adding a new score
 btnInput.addEventListener('click', (e) => {
@@ -43,6 +47,12 @@ addScoresBtn.addEventListener('click', (e) => {
 	// Allow multiple quick inputs
 	scoresListInput.value = '';
 	scoresListInput.focus();
+});
+
+removeScores.addEventListener('click', (e) => {
+	scores.length = 0;
+	saveScores();
+	renderScores();
 });
 
 // Rappresentation of scores
@@ -105,11 +115,13 @@ function calculateAvg() {
 
 function addScore(score) {
 	scores.push(Number(score));
+	saveScores();
 	renderScores();
 }
 
 function removeScore(scoreIndex) {
 	scores.splice(scoreIndex, 1);
+	saveScores();
 	renderScores();
 }
 
@@ -120,4 +132,9 @@ function validyScore(score) {
 		return 0;
 	}
 	return 1;
+}
+
+// Local storage
+function saveScores() {
+	localStorage.setItem('scores', JSON.stringify(scores));
 }
