@@ -18,13 +18,6 @@ body {
 		sans-serif;
 }
 
-@media (max-width: 900px) {
-	.hero-section > .h-wrapper {
-		flex-direction: column;
-		align-items: stretch;
-	}
-}
-
 /*  */
 /* Global styling */
 
@@ -207,6 +200,7 @@ header {
 
 /*  */
 /* Lista voti styling */
+
 .form-title {
 	font-size: 2em;
 	margin-bottom: 0.2em;
@@ -288,4 +282,23 @@ form > input {
 /* Second section styling */
 #second {
 	height: 100vh;
+}
+
+/*  */
+/* Media queries */
+
+@media (max-width: 900px) {
+	.hero-section {
+		height: auto;
+	}
+
+	.hero-section > .h-wrapper {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	/* Limit scores list length */
+	.lista-voti {
+		max-height: 25rem;
+	}
 }
